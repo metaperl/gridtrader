@@ -1,0 +1,54 @@
+# Configuration File
+
+# Rename this to $accountHolder.ini, e.g., joseph.ini, peter.ini, terrence.ini
+
+# The section headers are all-lowercase
+# The keys within the sections use hungarianNotation
+
+[exchange]
+label = yobit
+apikey = B9BB048Bff44F829F91FF1436CD5Ea9a
+secret = b57bec11abdbd5fe7f3e76608e000d9a
+
+
+
+[markets]
+# List of markets to trade
+# Obeys the https://github.com/ccxt/ccxt conventions
+KBC/ETH = 2600
+
+
+
+# The following grid parameters apply to the sell and buy grid =
+
+# - majorLevel = This is the percentage amount
+#   above/below the current market price that determines the first level in the
+#   sell/buy grid. E.g. if the current market price is 1.00 and the majorLevel
+#   is 20. Then you add 20% to 1.00 to define the first position in the
+#   sell grid. Therefore the first position is 1.20
+#   For testing purposes, I set this to a very small value (e.g. 0.01)
+#   so that the grid is triggered quickly
+
+# - numberOfOrders = the number of orders in the sell grid.
+
+# - coreUse = the percentage of your coin to put in the sell grid. I suggest 30%
+#   so that your sell grid can be exhausted 3 times before a pullback and you
+#   remain in the game
+
+# - increments = the percent spacing between elements of the grid
+
+[sellgrid]
+majorLevel = 1
+numberOfOrders = 5
+coreUse = 30
+increments = 1
+
+# profitTarget is what % profit you want to sell a filled buy order for
+
+[buygrid]
+profitTarget = 3
+
+majorLevel = 1
+coreUse = 30
+numberOfOrders = 5
+increments = 1

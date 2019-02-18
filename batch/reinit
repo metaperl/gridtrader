@@ -1,0 +1,5 @@
+#!/bin/bash -x
+
+
+python gridtrader/gridtrader.py --cancel-all $1
+python gridtrader/gridtrader.py       --init $1

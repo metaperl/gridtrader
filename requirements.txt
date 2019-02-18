@@ -1,0 +1,13 @@
+argcomplete
+argh
+ccxt
+configobj
+dill
+forwardable
+icecream
+mailer
+python-box
+retry
+sympy
+tabulate
+tqdm
